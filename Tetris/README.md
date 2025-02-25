@@ -89,3 +89,44 @@ This project is a C++ console application that recreates the classic game Tetris
     How can you improve the player's experience visually and interactively?
 **Add Additional Features:** 
     What additional features could enhance the game (e.g., next piece preview, high score tracking)?
+
+
+## Challenges
+
+**1. Using a single-dimensional array instead of a two-dimensional array**
+
+0 degree:
+Formula: py * 4 + px
+_ __ __ __ __ _
+|  0  1  2  3 |
+|  4  5  6  7 |
+|  8  9 10 11 |
+| 12 13 14 15 |
+_ __ __ __ __ _
+
+90 degree rotation:
+Formula: 12 + py - (px * 4)
+_ __ __ __ __ _
+| 12  8  4  0 |
+| 13  9  5  1 |
+| 14 10  6  2 |
+| 15 11  7  3 |
+_ __ __ __ __ _
+
+180 degree rotation:
+Formula: 15 - (py * 4) - px
+_ __ __ __ __ _
+| 15 14 13 12 |
+| 11 10  9  8 |
+|  7  6  5  4 |
+|  3  2  1  0 |
+_ __ __ __ __ _
+
+270 degree rotation: 
+Formula: 3 - py + (px * 4)
+_ __ __ __ __ _
+| 3  7  11 15 |
+| 2  6  10 14 |
+| 1  5  9  13 |
+| 0  4  8  12 |
+_ __ __ __ __ _
